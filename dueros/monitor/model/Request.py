@@ -120,6 +120,3 @@ class Request:
         if Utils.checkKeysInDict(self.data, ['request', 'dialogState']):
             return self.data['request']['dialogState'] == 'COMPLETED'
         return False
-
-if __name__ == '__main__':
-    pass

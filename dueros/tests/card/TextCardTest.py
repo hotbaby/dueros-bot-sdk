@@ -29,7 +29,7 @@ class TextCardTest(unittest.TestCase):
         测试setAnchor方法
         :return:
         '''
-        self.card.set_anchor('http://www.baidu.com', '百度');
+        self.card.set_anchor('http://www.baidu.com', '百度')
         card = {
             'type': 'txt',
             'content': '这是TextCard',
@@ -49,9 +49,4 @@ class TextCardTest(unittest.TestCase):
         }
         self.assertEqual(self.card.get_data(), card)
 
-    pass
-
-
-
-if __name__ == '__main__':
     pass

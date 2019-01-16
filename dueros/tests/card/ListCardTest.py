@@ -12,7 +12,6 @@ class ListCardTest(unittest.TestCase):
     def setUp(self):
         self.listCard = ListCard()
 
-
     def testAddItem(self):
         '''
         测试addItem方法
@@ -48,7 +47,3 @@ class ListCardTest(unittest.TestCase):
             ]
         }
         self.assertEqual(self.listCard.get_data(), card)
-
-
-if __name__ == '__main__':
-    pass

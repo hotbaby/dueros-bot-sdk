@@ -1,3 +1,4 @@
+# encoding: utf8
 """
 处理完后构建返回数据
 详见：https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-custom/response_markdown#response
@@ -101,7 +102,8 @@ class Response(Base):
             directives = []
 
         if len(directives) > 0:
-            directives = list(map(lambda value: value.get_data(), list(filter(lambda value: isinstance(value, BaseDirective), directives))))
+            directives = list(map(lambda value: value.get_data(), list(
+                filter(lambda value: isinstance(value, BaseDirective), directives))))
 
         if self.nlu:
             arr = self.nlu.to_directive()
@@ -112,7 +114,6 @@ class Response(Base):
         if Utils.checkKeyInDict(data, 'autoCompleteSpeech') and isinstance(
                 Utils.checkKeyInDict(data, 'autoCompleteSpeech'), bool):
             auto_complete_speech = data['autoCompleteSpeech']
-
 
         if auto_complete_speech and not data['outputSpeech'] and data['card'] and isinstance(data['card'], TextCard):
             data['outputSpeech'] = data['card'].get_data()['content']
@@ -257,8 +258,3 @@ class Response(Base):
         :return:
         """
         self.directives_arrangement = 'STRICT'
-
-
-if __name__ == '__main__':
-
-    pass

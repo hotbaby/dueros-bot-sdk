@@ -17,7 +17,7 @@ from dueros.Utils import Utils
 
 class Bot(Base):
 
-    def __init__(self, request_data, private_key= ''):
+    def __init__(self, request_data, private_key=''):
         """
         构造方法
         :param request_data:
@@ -369,19 +369,19 @@ class Bot(Base):
         if not self.handler:
             return
 
-        #循环遍历handler 通过正则判断调用哪个handler
+        # 循环遍历handler 通过正则判断调用哪个handler
         for item in self.handler:
             if item:
-                #获取rule(其实是自己的技能意图的英文标识)
+                # 获取rule(其实是自己的技能意图的英文标识)
                 rule = item['rule']
-                #校验handler
+                # 校验handler
                 if self.__check_handler(rule):
-                    #匹配到handler获取对应的回调方法并立即执行
+                    # 匹配到handler获取对应的回调方法并立即执行
                     func = item['func']
                     ret = self.__call_func(func, None)
                     if ret:
                         return ret
-        #调用回调
+        # 调用回调
         self.un_match_handler(self.callback_data)
 
     def __get_register_event_handler(self):
@@ -494,7 +494,7 @@ class Bot(Base):
         if self.callback_func and data:
             self.callback_func(data)
 
-    #TODO
+    # TODO
     def token_value(self, str):
         '''
 
@@ -682,6 +682,7 @@ class Bot(Base):
         self.add_intent_handler('ai.dueros.common.previous_intent', func)
 
     """==================================Dueros音频事件=================================="""
+
     def add_audio_playback_started(self, func):
         """
         客户端开始播放的时候，需要上报此事件
@@ -927,5 +928,3 @@ class Bot(Base):
         :return:
         """
         self.add_event_listener('Form.RadioButtonClicked', func)
-
-

@@ -1,29 +1,22 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/6
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 from setuptools import setup
 from setuptools import find_packages
 
 setup(
-    name='dueros-bot',
-    version='2.2.0',
+    name='dueros-bot-sdk',
+    version='v1.0.0',
     author='jack',
     author_email='mupdf@sina.com',
-    description='Third party DuerOS Bot Python SDK',
-    keywords='DuerOS Bot',
-    url='https://github.com/jokenwang/bot-sdk-python',
+    description='DuerOS Bot Python SDK',
+    keywords='DuerOS Bot SDK',
+    license='MIT',
+    url='https://github.com/hotbaby/dueros-bot-sdk',
     packages=find_packages(),
-    install_requires=[
-        'pycryptodome >= 3.6.6',
-        'requests',
-	    'pyOpenSSL'
-    ]
+    install_requires=['pycryptodome >= 3.6.6', 'requests', 'pyOpenSSL'],
+    classifiers=[
+        "Programming Language :: Python :: 2",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )
