@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/31
-
+# encoding: utf8
 """
 VideoPlayer视频播放
 详见文档：https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-custom/videoplayer_markdown#VideoPlayer.Play%E6%8C%87%E4%BB%A4
@@ -57,18 +51,16 @@ class VideoPlayer(BaseDirective):
             if 'progressReport' not in self.data['videoItem']['stream']:
                 self.data['videoItem']['stream']['progressReport'] = {}
 
-            self.data['videoItem']['stream']['progressReport']['progressReportDelayInMilliseconds'] = int(report_delay_ms)
+            self.data['videoItem']['stream']['progressReport']['progressReportDelayInMilliseconds'] = int(
+                report_delay_ms)
 
     def set_report_interval_in_ms(self, interval_ms):
         interval_ms = Utils.convert_number(interval_ms)
         if interval_ms:
             if 'progressReport' not in self.data['videoItem']['stream']:
                 self.data['videoItem']['stream']['progressReport'] = {}
-            self.data['videoItem']['stream']['progressReport']['progressReportIntervalInMilliseconds'] = int(interval_ms)
+            self.data['videoItem']['stream']['progressReport']['progressReportIntervalInMilliseconds'] = int(
+                interval_ms)
 
     def set_expected_previous_token(self, previous_token):
         self.data['videoItem']['stream']['expectedPreviousToken'] = previous_token
-
-
-if __name__ == '__main__':
-    pass

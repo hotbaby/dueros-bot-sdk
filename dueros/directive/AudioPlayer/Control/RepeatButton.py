@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
 from dueros.directive.AudioPlayer.Control.RadioButton import RadioButton
 from dueros.directive.AudioPlayer.Control.RepeatButtonEnum import RepeatButtonEnum
 
@@ -23,10 +15,3 @@ class RepeatButton(RadioButton):
             self.data['selectedValue'] = selected_value.value
         else:
             self.data['selectedValue'] = RepeatButtonEnum.REPEAT_ONE.value
-
-
-    pass
-
-
-if __name__ == '__main__':
-    pass

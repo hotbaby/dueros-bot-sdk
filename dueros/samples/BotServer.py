@@ -1,20 +1,12 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/3
-
-"""
-    desc:pass
-"""
-#默认使用个税查询技能， 如果需要切换自己的技能  注意需要要更换成自己的Bot
+# encoding: utf8
+# 默认使用个税查询技能， 如果需要切换自己的技能  注意需要要更换成自己的Bot
 from dueros.samples.personal_income_tax.Bot import Bot
 from Bot import Bot
 import dueros.Log as Log
 from dueros.Constants import constants
-#配置日志
+# 配置日志
 Log.init_log(constants.LOG_PATH)
+
 
 def application(environ, start_response):
     try:
@@ -28,18 +20,19 @@ def application(environ, start_response):
 
     bot = Bot(request_body)
 
-    #验证签名enableVerifyRequestSign  disableVerifyRequestSign 关闭验证签名
+    # 验证签名enableVerifyRequestSign  disableVerifyRequestSign 关闭验证签名
     bot.init_certificate(environ).enable_verify_request_sign()
     # bot.initCertificate(environ).disableVerifyRequestSign()
 
-    #数据统计相关配置
-    #是否开启数据统计功能
+    # 数据统计相关配置
+    # 是否开启数据统计功能
     bot.set_monitor_enabled(True)
-    #设置私钥和统计模式(0:DEBUG模式, 1:ONLINE模式)
+    # 设置私钥和统计模式(0:DEBUG模式, 1:ONLINE模式)
     bot.set_environment_info(priKey, 0)
     body_str = bot.run()
 
     return writeResponse(start_response, body_str)
+
 
 def writeResponse(start_response, body_str):
 
@@ -53,8 +46,10 @@ def writeResponse(start_response, body_str):
 
     return [body]
 
+
 def callback(data):
     print(data)
+
 
 priKey = '''-----BEGIN RSA PRIVATE KEY-----
 MIICXQIBAAKBgQDKoeRzRVf8WoRSDYYqUzThpYCr90jfdFwTSXHJ526K8C6TEwdT

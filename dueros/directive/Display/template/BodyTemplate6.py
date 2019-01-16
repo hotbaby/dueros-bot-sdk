@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/9/17
+# encoding: utf8
 
 """
     上图下文模版类
@@ -23,8 +18,3 @@ class BodyTemplate6(TextImageTemplate):
     """
     def __init__(self):
         super(BodyTemplate6, self).__init__('BodyTemplate6')
-
-
-
-if __name__ == '__main__':
-    pass

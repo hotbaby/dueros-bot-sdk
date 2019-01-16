@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/3
-
+# encoding: utf8
 
 class Intercept:
 
@@ -26,6 +20,3 @@ class Intercept:
         '''
 
         return result
-
-if __name__ == '__main__':
-    pass

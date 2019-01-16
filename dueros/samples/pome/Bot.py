@@ -1,17 +1,9 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/3
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 from dueros.Bot import Bot
 from dueros.card.TextCard import TextCard
 import json
+
 
 class Bot(Bot):
     def launchRequest(self):
@@ -50,8 +42,4 @@ class Bot(Bot):
         self.add_intent_handler('ai.dueros.common.default_intent', self.controlRequest)
 
         self.add_intent_handler('dueros.device_interface.smart_device.search', self.intentRequest)
-    pass
-
-
-if __name__ == '__main__':
     pass

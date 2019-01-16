@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
 from enum import Enum, unique
 
 
@@ -19,9 +11,3 @@ class ThumbsUpDownButtonEnum(Enum):
     @staticmethod
     def inEnum(thumbsUpDown):
         return thumbsUpDown in ThumbsUpDownButtonEnum.__members__.values()
-
-    pass
-
-
-if __name__ == '__main__':
-    pass

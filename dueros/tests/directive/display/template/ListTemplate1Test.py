@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 import unittest
 from dueros.directive.Display.template.ListTemplate1 import ListTemplate1
 from dueros.directive.Display.template.ListTemplateItem import ListTemplateItem
@@ -27,7 +17,7 @@ class ListTemplate1Test(unittest.TestCase):
         测试getData
         :return:
         '''
-        self.listTemplate1.set_background_image('http://back-img.com');
+        self.listTemplate1.set_background_image('http://back-img.com')
 
         listTemplateItem1 = ListTemplateItem()
         listTemplateItem1.set_image('http://item-img1.com', '123', '345')
@@ -104,8 +94,4 @@ class ListTemplate1Test(unittest.TestCase):
         }
 
         self.assertEqual(self.listTemplate1.get_data(), ret)
-    pass
-
-
-if __name__ == '__main__':
     pass

@@ -1,14 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: UTF-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2017/12/31
-
-"""
-    desc:pass
-"""
-
+import sys
 import logging
 from dueros.Bot import Bot
 from dueros.card.TextCard import TextCard
@@ -16,7 +8,6 @@ from dueros.directive.Display.template.BodyTemplate1 import BodyTemplate1
 from dueros.directive.Display.RenderTemplate import RenderTemplate
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger('bot')
-import sys
 
 
 class BotTest(Bot):
@@ -41,7 +32,8 @@ class BotTest(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setToken('token')
         bodyTemplate.setTitle('托尔斯泰的格言')
-        bodyTemplate.setBackGroundImage('https://skillstore.cdn.bcebos.com/icon/100/c709eed1-c07a-be4a-b242-0b0d8b777041.jpg')
+        bodyTemplate.setBackGroundImage(
+            'https://skillstore.cdn.bcebos.com/icon/100/c709eed1-c07a-be4a-b242-0b0d8b777041.jpg')
         bodyTemplate.setPlainTextContent('拖尔斯泰-理想的书籍是智慧的钥匙')
         renderTemplate = RenderTemplate(bodyTemplate)
 
@@ -78,6 +70,7 @@ class BotTest(Bot):
         # self.addIntentHandler('inquiry', self.inquiry)
     pass
 
+
 if __name__ == '__main__':
 
     def launchData():
@@ -92,11 +85,9 @@ if __name__ == '__main__':
         with open("./json/control.json", 'r', encoding='utf-8') as load_f:
             return load_f.read()
 
-
     def controlData2():
         with open("./json/a.json", 'r', encoding='utf-8') as load_f:
             return load_f.read()
-
 
     def tt(data):
         print(data)
@@ -118,6 +109,6 @@ if __name__ == '__main__':
     # uuid = uuid + token[16:20] + '-'
     # uuid = uuid + token[20:]
     print(sys.version_info[0])
-    #while True:
+    # while True:
     #    print("====")
     pass

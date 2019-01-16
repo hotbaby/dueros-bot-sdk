@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
-
+# encoding: utf8
 """
 ListItem
 详见文档：https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-custom/display-template_markdown#ListItem
@@ -96,13 +90,8 @@ class ListTemplateItem(BaseTemplate):
         if anchor_word and isinstance(anchor_word, str):
             self.data['anchorWord'] = anchor_word
 
+
 def get_image_tag_data(tags):
     if not tags or not isinstance(tags, list):
         return []
     return list(map(lambda value: value.get_data(), tags))
-
-
-if __name__ == '__main__':
-
-
-    pass

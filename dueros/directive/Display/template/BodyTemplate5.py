@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
+# encoding: utf8
 
 """
 BodyTemplate5模板
@@ -26,8 +21,3 @@ class BodyTemplate5(BaseTemplate):
         if image_structure:
             self.data['images'].append(image_structure.get_data())
         return self
-    pass
-
-
-if __name__ == '__main__':
-    pass

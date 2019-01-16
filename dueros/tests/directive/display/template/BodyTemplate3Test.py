@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
 import unittest
 from dueros.directive.Display.template.BodyTemplate3 import BodyTemplate3
 
@@ -40,8 +32,8 @@ class BodyTemplate3Test(unittest.TestCase):
                 'text': 'test'
 
             },
-            'image':{
-                'url':'http://www.baidu.com'
+            'image': {
+                'url': 'http://www.baidu.com'
             },
             'backgroundImage': {
                 'url': 'http://www.baidu.com'
@@ -49,8 +41,4 @@ class BodyTemplate3Test(unittest.TestCase):
         }
 
         self.assertEqual(data, ret)
-    pass
-
-
-if __name__ == '__main__':
     pass

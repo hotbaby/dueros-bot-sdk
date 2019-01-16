@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 from dueros.directive.Display.template.TextStructure import TextStructure
 from dueros.directive.Display.template.ImageStructure import ImageStructure
@@ -94,10 +85,10 @@ class BaseTemplate:
 
             return function
 
+
 if __name__ == '__main__':
 
     bodytemplate = BaseTemplate(['token'])
     bodytemplate.set_token('a')
     bodytemplate.set_background_image('aaaa')
     print(bodytemplate.get_data())
-    pass

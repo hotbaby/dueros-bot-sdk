@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/9/1
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 from dueros.directive.Display.media.BaseMediaListItem import BaseMediaListItem
 
@@ -25,6 +16,3 @@ class AudioItem(BaseMediaListItem):
         """
         if isinstance(tag, bool):
             self.data['isMusicVideo'] = tag
-
-if __name__ == '__main__':
-    pass

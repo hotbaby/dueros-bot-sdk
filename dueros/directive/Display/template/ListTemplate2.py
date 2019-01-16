@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
+# encoding: utf8
 
 """
 ListTemplate2模板
@@ -34,4 +29,3 @@ if __name__ == '__main__':
     listTemplateItem.set_tertiary_text('三级')
     listTemplate.add_item(listTemplateItem)
     print(listTemplate.get_data())
-    pass

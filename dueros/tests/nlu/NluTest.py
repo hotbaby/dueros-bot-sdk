@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
+# encoding: utf8
 """
 Nlu单元测试
 """
@@ -125,8 +119,4 @@ class NluTest(unittest.TestCase):
         }
         self.assertEqual(self.nlu.to_directive(), directive)
 
-    pass
-
-
-if __name__ == '__main__':
     pass

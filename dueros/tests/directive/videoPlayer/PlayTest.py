@@ -1,21 +1,12 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 import unittest
 from dueros.directive.VideoPlayer.Play import VideoPlayer
 from dueros.directive.AudioPlayer.PlayBehaviorEnum import PlayBehaviorEnum
 
+
 class PlayTest(unittest.TestCase):
 
-    url = 'http://dbp-resource.gz.bcebos.com/zhaojing_demo/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3?authorization=bce-auth-v1%2Fbc881876e7a94578935a868716b6cf69%2F2018-05-29T08%3A13%3A27Z%2F-1%2Fhost%2Fbff1c88a876764a98d3f3f35bc2a4952835190339b64a39c7020e8a4b190b3b9';
+    url = 'http://dbp-resource.gz.bcebos.com/zhaojing_demo/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3?authorization=bce-auth-v1%2Fbc881876e7a94578935a868716b6cf69%2F2018-05-29T08%3A13%3A27Z%2F-1%2Fhost%2Fbff1c88a876764a98d3f3f35bc2a4952835190339b64a39c7020e8a4b190b3b9'
 
     def setUp(self):
         self.play1 = VideoPlayer(self.url, PlayBehaviorEnum.REPLACE_ENQUEUED)
@@ -57,8 +48,4 @@ class PlayTest(unittest.TestCase):
 
         self.assertEqual(data, ret)
 
-    pass
-
-
-if __name__ == '__main__':
     pass

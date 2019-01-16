@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/9/19
-
-"""
-    desc:pass
-"""
 from dueros.directive.AudioPlayer.Control.BaseButton import BaseButton
 from dueros.directive.Base.BasePlayerInfoContent import BasePlayerInfoContent
 
@@ -48,8 +40,3 @@ class TraitPlayerInfo:
             controls_data = list(map(lambda value: value.get_data(), self.controls))
             self.data['controls'] = controls_data
         return self.data
-    pass
-
-
-if __name__ == '__main__':
-    pass

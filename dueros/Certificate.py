@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/1/3
-
-"""
-    desc:pass
-"""
 import os
 import fcntl
 import hashlib
@@ -119,7 +111,7 @@ class Certificate(Base):
 
     def get_request_sign(self):
         return self.environ['HTTP_SIGNATURE']
-    
+
     def get_public_key_fromX509(self, content):
         """
         获取publicKey
@@ -169,6 +161,7 @@ IYdYV3QpYohFszH3wQIDAQAB
 -----END PUBLIC KEY-----'''
 
     data = 'partner="2088701924089318"&seller="774653@qq.com"&out_trade_no="123000"&subject="123456"&body="2010新款NIKE 耐克902第三代板鞋 耐克男女鞋 386201 白红"&total_fee="0.01"¬ify_url="http://notify.java.jpxx.org/index.jsp'
+
     def sign(data):
         key = RSA.importKey(priKey)
         digest = SHA.new()
@@ -176,7 +169,6 @@ IYdYV3QpYohFszH3wQIDAQAB
         signer = PKCS1_v1_5.new(key)
         signature = signer.sign(digest)
         return b64encode(signature)
-
 
     def verify(data, signature):
         key = RSA.importKey(pubKey)
@@ -190,4 +182,3 @@ IYdYV3QpYohFszH3wQIDAQAB
     signData = sign(data)
     print(sign(data))
     print(verify(data, signData))
-    pass

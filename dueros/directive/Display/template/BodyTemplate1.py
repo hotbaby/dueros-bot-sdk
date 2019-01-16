@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
+# encoding: utf8
 
 """
 BodyTemplate1模板
@@ -41,12 +36,11 @@ class BodyTemplate1(BaseTemplate):
 
             return self
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     bodytemplate = BodyTemplate1()
     bodytemplate.set_title('呵呵')
     bodytemplate.set_token("tttt")
     bodytemplate.set_background_image('htt[://///')
     bodytemplate.set_plain_text_content('bodyTemplate')
     print(bodytemplate.get_data())
-    pass

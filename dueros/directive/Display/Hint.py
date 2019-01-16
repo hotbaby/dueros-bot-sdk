@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/31
-
-"""
-    desc:pass
-"""
 from dueros.directive.BaseDirective import BaseDirective
 
 
@@ -31,4 +23,3 @@ if __name__ == '__main__':
 
     hint = Hint('aaa')
     print(hint.get_data())
-    pass

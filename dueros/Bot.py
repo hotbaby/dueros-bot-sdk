@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
+# encoding: utf8
 """
 Bot入口, 实现自己的技能需要继承此类。并在构造方法内添加意图的处理方法
 """
@@ -934,5 +929,3 @@ class Bot(Base):
         self.add_event_listener('Form.RadioButtonClicked', func)
 
 
-if __name__ == '__main__':
-    pass

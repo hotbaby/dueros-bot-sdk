@@ -1,20 +1,10 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/2/26
-
-"""
-    desc:pass
-"""
-import unittest
+# encoding: utf8
 
 import math
-
-
-import dueros.Log as log
 import logging
+import unittest
+import dueros.Log as log
+
 
 class BaseTest(object):
 
@@ -27,4 +17,4 @@ if __name__ == "__main__":
     # log.init_log("./log/my_program")  # 日志保存到./log/my_program.log和./log/my_program.log.wf，按天切割，保留7天
     # logging.info("Hello World!!!")
     a = 'dfsfd#123'
-    print(a.split('#',1)[0])
+    print(a.split('#', 1)[0])

@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
+# encoding: utf8
 
 """
 BodyTemplate2模板
@@ -27,4 +22,3 @@ if __name__ == '__main__':
     bodytemplate.set_background_image('http://adfasdf')
     bodytemplate.set_plain_content('bodyTemplate')
     print(bodytemplate.get_data())
-    pass

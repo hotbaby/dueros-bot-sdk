@@ -1,17 +1,8 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/16
-
-"""
-    desc:pass
-"""
-
-from dueros.monitor.model.Request import Request
+# encoding: utf8
 import os
 import json
+from dueros.monitor.model.Request import Request
+
 
 class test_launch:
     pass
@@ -30,5 +21,3 @@ if __name__ == '__main__':
     print(request.get_user_id())
     print(request.get_bot_id())
     print(request.is_dialog_state_completed())
-
-    pass

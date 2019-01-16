@@ -1,14 +1,7 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-# description:
-# author:jack
-# create_time: 2018/1/3
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 from dueros.Bot import Bot
+
+
 class Bot(Bot):
     def launchRequest(self):
         '''
@@ -38,7 +31,7 @@ class Bot(Bot):
                 'reprompt': r'你的税前工资是多少呢',
                 'outputSpeech': r'你的税前工资是多少呢'
             }
-         
+
         computeType = self.get_slots('compute_type')
         if not computeType:
             self.nlu.ask('compute_type')
@@ -50,19 +43,14 @@ class Bot(Bot):
             return {
                 'outputSpeech': r'你需要缴纳' + str(taxNum)
             }
-    
+
     def computeType(self, num, city):
         '''
         调用接口计算个税
         '''
         return 100
 
-
     def __init__(self, data):
         super(Bot, self).__init__(data)
         self.add_launch_handler(self.launchRequest)
         self.add_intent_handler('personal_income_tax.inquiry', self.getTaxSlot)
-
-
-if __name__ == '__main__':
-    pass

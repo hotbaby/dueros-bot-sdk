@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2017/12/30
 """
 DuerOS对Bot的请求封装
 """
@@ -74,7 +70,7 @@ class Request(Base):
         获取来自端上报的原始设备Id
         :return:
         """
-        return Utils.get_dict_data_by_keys(self.data, ['context', 'System', 'device', 'originalDeviceId' ])
+        return Utils.get_dict_data_by_keys(self.data, ['context', 'System', 'device', 'originalDeviceId'])
 
     def get_audio_player_context(self):
         """
@@ -137,7 +133,7 @@ class Request(Base):
         """
 
         return Utils.get_dict_data_by_keys(self.data,
-                                       ['context', 'System', 'user', 'userInfo', 'account', 'baidu', 'baiduUid'])
+                                           ['context', 'System', 'user', 'userInfo', 'account', 'baidu', 'baiduUid'])
 
     def get_type(self):
         """
@@ -261,7 +257,3 @@ class Request(Base):
                 return video_player['preferedBitrate']
         else:
             return ''
-
-
-if __name__ == '__main__':
-    pass

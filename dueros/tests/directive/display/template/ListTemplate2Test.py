@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 import unittest
 from dueros.directive.Display.template.ListTemplate2 import ListTemplate2
 from dueros.directive.Display.template.ListTemplateItem import ListTemplateItem
@@ -105,8 +96,4 @@ class ListTemplate2Test(unittest.TestCase):
 
         self.assertEqual(self.listTemplate2.get_data(), ret)
 
-    pass
-
-
-if __name__ == '__main__':
     pass

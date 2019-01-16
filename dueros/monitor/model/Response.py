@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/3
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 from dueros.monitor.Utils import Utils
 import json
 
@@ -28,13 +19,10 @@ class Response:
     def get_slot_name(self):
         if Utils.checkKeysInDict(self.data, ['response', 'directives']):
             directive = self.data['response']['directives']
-            if directive and Utils.checkKeysInDict(directive[0],['slotToElicit']) and directive[0]['slotToElicit']:
+            if directive and Utils.checkKeysInDict(directive[0], ['slotToElicit']) and directive[0]['slotToElicit']:
                 return directive[0]['slotToElicit']
         return None
 
     def get_reprompt(self):
 
         return Utils.get_dict_data_by_keys(self.data, ['response', 'reprompt', 'outputSpeech'])
-
-if __name__ == '__main__':
-    pass

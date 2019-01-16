@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
+# encoding: utf8
 """
 语义解析
 """
@@ -217,7 +212,3 @@ class Nlu(Base):
             'type': 'Dialog.ConfirmIntent',
             'updatedIntent': self.__get_update_intent()
         }
-
-
-if __name__ == '__main__':
-    pass

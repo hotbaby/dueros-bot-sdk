@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
 import unittest
 from dueros.directive.Display.RenderTemplate import RenderTemplate
 from dueros.directive.Display.template.BodyTemplate2 import BodyTemplate2
@@ -32,7 +24,7 @@ class RenderTemplateTest(unittest.TestCase):
         print(data)
         ret = {
             'type': 'Display.RenderTemplate',
-            'template':{
+            'template': {
                 'type': 'BodyTemplate2',
                 'token': 'token',
                 'content': {
@@ -48,8 +40,4 @@ class RenderTemplateTest(unittest.TestCase):
         }
 
         self.assertEqual(data, ret)
-    pass
-
-
-if __name__ == '__main__':
     pass

@@ -1,15 +1,7 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 from enum import Enum, unique
+
 
 @unique
 class RepeatButtonEnum(Enum):
@@ -21,8 +13,4 @@ class RepeatButtonEnum(Enum):
     def inEnum(repeatButton):
         return repeatButton in RepeatButtonEnum.__members__.values()
 
-    pass
-
-
-if __name__ == '__main__':
     pass

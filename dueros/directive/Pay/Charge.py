@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
+# encoding: utf8
 
 """
 DuerOS 支付协议
@@ -104,7 +99,3 @@ class Charge(BaseDirective):
         """
         if isinstance(seller_note, str) and seller_note:
             self.data['payload']['chargeBaiduPay']['sellerOrderAttributes']['sellerNote'] = seller_note
-
-
-if __name__ == '__main__':
-    pass

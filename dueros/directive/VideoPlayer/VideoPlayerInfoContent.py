@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/9/19
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 from dueros.directive.Base.BasePlayerInfoContent import BasePlayerInfoContent
 from dueros.Utils import Utils
 
@@ -27,8 +18,3 @@ class VideoPlayerInfoContent(BasePlayerInfoContent):
         milliseconds = Utils.convert_number(media_length_in_milliseconds)
         if milliseconds:
             self.data['mediaLengthInMilliseconds'] = milliseconds
-    pass
-
-
-if __name__ == '__main__':
-    pass

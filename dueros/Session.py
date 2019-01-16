@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
-
+# encoding: utf8
 """
 Session相关
 相关文档:https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-custom/response_markdown#session%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E
@@ -70,7 +64,3 @@ class Session(Base):
     def clear_session_field(self, field):
         if field and isinstance(field, str) and field in self.data:
             value = self.data.pop(field)
-
-if __name__ == '__main__':
-
-    pass

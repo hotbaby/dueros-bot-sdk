@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 
 from dueros.directive.Display.template.BaseTemplate import BaseTemplate
 from dueros.directive.Display.template.ListTemplateItem import ListTemplateItem
@@ -25,9 +15,3 @@ class ListTemplate(BaseTemplate):
         if isinstance(item, ListTemplateItem):
             self.data['listItems'].append(item.get_data())
         return self
-
-
-if __name__ == '__main__':
-
-    #
-    pass

@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/5
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 import json
 import time
 
@@ -52,7 +43,6 @@ class Utils:
                     elif isinstance(v, str):
                         return v
 
-
     @staticmethod
     def get_dict_data_by_keys(dicts, keys):
         if isinstance(dicts, str):
@@ -67,7 +57,6 @@ class Utils:
                     return dicts
                 continue
             return None
-
 
     @staticmethod
     def is_numeric(value):
@@ -97,7 +86,3 @@ class Utils:
         '''
 
         return int(time.time())
-
-
-if __name__ == '__main__':
-    pass

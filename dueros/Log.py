@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/2/26
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 import os
 import logging
@@ -67,7 +58,3 @@ def init_log(log_path, level=logging.INFO, when="D", backup=7,
     handler.setLevel(logging.WARNING)
     handler.setFormatter(formatter)
     logger.addHandler(handler)
-
-if __name__ == '__main__':
-
-    pass

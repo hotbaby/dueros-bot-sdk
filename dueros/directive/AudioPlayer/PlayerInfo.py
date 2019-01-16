@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
 from dueros.Utils import Utils
 from dueros.directive.AudioPlayer.AudioItemTypeEnum import AudioItemTypeEnum
 from dueros.directive.Base.TraitPlayerInfo import TraitPlayerInfo
@@ -65,9 +57,3 @@ class PlayerInfo(TraitPlayerInfo):
         if not Utils.checkKeyInDict(self.data['content']['provider'], 'logo'):
             self.data['content']['provider']['logo'] = {}
         self.data['content']['provider']['logo']['src'] = logo
-
-    pass
-
-
-if __name__ == '__main__':
-    pass

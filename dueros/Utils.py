@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/5
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 import time
 import random
 import hashlib
@@ -66,7 +56,6 @@ class Utils:
                 continue
             return None
 
-
     @staticmethod
     def is_numeric(value):
         if isinstance(value, str):
@@ -93,7 +82,7 @@ class Utils:
         生成Token md5(9位随机数+时间戳) 再截取md5后的字符串
         :return: uuid
         """
-        #生成随机数
+        # 生成随机数
         rand = str(random.randint(0, 9999999999))
         t = str(round(time.time() * 1000))
         md5Str = rand + t
@@ -113,8 +102,8 @@ class Utils:
         sha1.update(key.encode('utf-8'))
         return sha1.hexdigest()
 
+
 if __name__ == '__main__':
     sha1 = hashlib.sha1()
     sha1.update('http://vt1.doubanio.com/201811172131/16f6bbfeaaf6bbe6acba4c04fac2712d/view/movie/M/402380330.mp4'.encode('utf-8'))
     print(sha1.hexdigest())
-    pass

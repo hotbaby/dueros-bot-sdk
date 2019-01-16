@@ -1,24 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
-
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/13
-
-"""
-    desc:pass
-"""
 import unittest
 from dueros.directive.AppLauncher.LaunchApp import LaunchApp
 
@@ -52,7 +33,3 @@ class LaunchAppTest(unittest.TestCase):
 
         data = self.launchApp.get_data()
         self.assertEqual(data, ret)
-
-
-if __name__ == '__main__':
-    pass

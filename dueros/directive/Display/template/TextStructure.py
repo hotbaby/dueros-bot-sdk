@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/26
-
-"""
-    desc:pass
-"""
 
 class TextStructure:
 
@@ -29,8 +21,3 @@ class TextStructure:
     def get_data(self):
 
         return self.data
-    pass
-
-
-if __name__ == '__main__':
-    pass

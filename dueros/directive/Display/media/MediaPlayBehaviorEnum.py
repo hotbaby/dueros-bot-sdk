@@ -1,14 +1,7 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/27
-
-"""
-    desc:pass
-"""
 from enum import Enum, unique
+
 
 @unique
 class MediaPlayBehaviorEnum(Enum):
@@ -24,9 +17,3 @@ class MediaPlayBehaviorEnum(Enum):
     @staticmethod
     def inEnum(playBehavior):
         return playBehavior in MediaPlayBehaviorEnum.__members__.values()
-
-
-if __name__ == '__main__':
-
-
-    pass

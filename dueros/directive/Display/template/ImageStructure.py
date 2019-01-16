@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/26
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 
 class ImageStructure:
 
@@ -30,6 +20,3 @@ class ImageStructure:
 
     def get_data(self):
         return self.data
-
-if __name__ == '__main__':
-    pass

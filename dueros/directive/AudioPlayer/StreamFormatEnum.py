@@ -1,14 +1,7 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/29
-
-"""
-    desc:pass
-"""
 from enum import Enum, unique
+
 
 @unique
 class StreamFormatEnum(Enum):
@@ -22,6 +15,3 @@ class StreamFormatEnum(Enum):
 
     pass
 
-
-if __name__ == '__main__':
-    pass

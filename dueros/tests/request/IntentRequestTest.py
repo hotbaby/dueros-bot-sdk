@@ -1,20 +1,11 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 import unittest
 import json
 import sys
 from dueros.Request import Request
 from dueros.Nlu import Nlu
 from dueros.Utils import Utils
+
 
 class IntentRequestTest(unittest.TestCase):
 
@@ -39,7 +30,6 @@ class IntentRequestTest(unittest.TestCase):
         '''
         nlu = Nlu(self.data['request']['intents'])
         self.assertEqual(self.request.get_nlu().to_directive(), nlu.to_directive())
-
 
     def testGetAudioPlayerContext(self):
         '''
@@ -96,7 +86,6 @@ class IntentRequestTest(unittest.TestCase):
 
         self.assertFalse(self.request.is_session_ended_request())
 
-
     def testGetBotId(self):
         '''
         测试getBotId方法
@@ -149,7 +138,3 @@ class IntentRequestTest(unittest.TestCase):
             return Utils.checkKeyInDict(supported_interfaces, support_func)
         else:
             return False
-
-
-if __name__ == '__main__':
-    pass

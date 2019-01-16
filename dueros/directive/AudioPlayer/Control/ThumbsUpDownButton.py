@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
 from dueros.directive.AudioPlayer.Control.RadioButton import RadioButton
 from dueros.directive.AudioPlayer.Control.ThumbsUpDownButtonEnum import ThumbsUpDownButtonEnum
 
@@ -22,9 +14,3 @@ class ThumbsUpDownButton(RadioButton):
             self.data['selectedValue'] = selected_value.value
         else:
             self.data['selectedValue'] = ThumbsUpDownButtonEnum.THUMBS_UP.value
-
-    pass
-
-
-if __name__ == '__main__':
-    pass

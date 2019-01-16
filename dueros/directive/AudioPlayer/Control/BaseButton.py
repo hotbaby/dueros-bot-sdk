@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
-
+# encoding: utf8
 
 class BaseButton:
 
@@ -20,9 +10,3 @@ class BaseButton:
     def get_data(self):
 
         return self.data
-
-    pass
-
-
-if __name__ == '__main__':
-    pass

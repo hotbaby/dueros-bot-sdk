@@ -1,15 +1,10 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/2
+# encoding: utf8
 """
 用于调用app的指令类
 """
 
-from dueros.directive.BaseDirective import BaseDirective
 import logging
+from dueros.directive.BaseDirective import BaseDirective
 
 
 class LaunchApp(BaseDirective):
@@ -51,9 +46,9 @@ class LaunchApp(BaseDirective):
             self.data['deepLink'] = deep_link
         return self
 
+
 if __name__ == '__main__':
 
     launchApp = LaunchApp('', '', '2')
     launchApp.set_deep_link('dd')
     print(launchApp.data)
-

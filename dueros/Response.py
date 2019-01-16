@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: UTF-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
 """
 处理完后构建返回数据
 详见：https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-custom/response_markdown#response

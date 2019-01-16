@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 import unittest
 import json
 import sys
@@ -58,16 +49,16 @@ class LaunchRequsetTest(unittest.TestCase):
                 }
             },
             "location": {
-                "geo":{
-                    "bd09ll":{
+                "geo": {
+                    "bd09ll": {
                         "longitude": 12.12,
                         "latitude": 34.12
                     },
-                    "wgs84":{
+                    "wgs84": {
                         "longitude": 12.12,
                         "latitude": 34.12
                     },
-                    "bd09mc":{
+                    "bd09mc": {
                         "longitude": 111112.12,
                         "latitude": 322224.12
                     }
@@ -75,7 +66,6 @@ class LaunchRequsetTest(unittest.TestCase):
             }
         }
         self.assertEqual(self.request.get_user_info(), userInfo)
-
 
     def testGetBaiduUid(self):
         '''
@@ -91,7 +81,7 @@ class LaunchRequsetTest(unittest.TestCase):
         :return:
         '''
 
-        self.assertEqual(self.request.get_type(), 'LaunchRequest');
+        self.assertEqual(self.request.get_type(), 'LaunchRequest')
 
     def testGetUserId(self):
         '''
@@ -116,6 +106,3 @@ class LaunchRequsetTest(unittest.TestCase):
 
     def testGetApiAccessToken(self):
         self.assertEqual(self.request.get_api_access_token(), 'api_access_token')
-
-if __name__ == '__main__':
-    pass

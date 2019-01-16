@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/9/19
-
-"""
-    desc:pass
-"""
+# encoding: utf8
+import json
 import unittest
 
 from dueros.directive.Display.RenderAudioPlayerInfo import RenderAudioPlayerInfo
@@ -15,7 +7,8 @@ from dueros.directive.AudioPlayer.AudioPlayerInfoContent import AudioPlayerInfoC
 from dueros.directive.AudioPlayer.Control.PlayPauseButton import PlayPauseButton
 from dueros.directive.AudioPlayer.Control.RepeatButton import RepeatButton
 
-import json
+
+
 class RenderAudioPlayerInfoTest(unittest.TestCase):
 
     def setUp(self):
@@ -40,14 +33,10 @@ class RenderAudioPlayerInfoTest(unittest.TestCase):
 
         playPauseButton = PlayPauseButton()
         repeatButton = RepeatButton()
-        controls = [playPauseButton,repeatButton]
+        controls = [playPauseButton, repeatButton]
 
         self.renderAudioPlayerInfo.set_token('test_token')
         self.renderAudioPlayerInfo.set_content(content)
         self.renderAudioPlayerInfo.set_controls(controls)
         self.assertEqual(self.renderAudioPlayerInfo.get_data(), self.data)
-    pass
-
-
-if __name__ == '__main__':
     pass

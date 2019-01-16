@@ -1,17 +1,8 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/1/16
-
-"""
-    desc:pass
-"""
-
-from dueros.monitor.model.Response import Response
+# encoding: utf8
 import os
 import json
+from dueros.monitor.model.Response import Response
+
 
 class test_response:
     pass
@@ -31,5 +22,3 @@ if __name__ == '__main__':
     print(response.get_should_end_session())
     print(response.get_output_speech())
     print(response.get_reprompt())
-
-    pass

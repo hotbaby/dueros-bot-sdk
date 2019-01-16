@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/31
+# encoding: utf8
 
 """
 用于生成Play指令的类
@@ -121,4 +116,3 @@ if __name__ == '__main__':
     # 设置Play指令的PlayerInfo
     directive.set_player_info(playerInfo)
     print(directive.get_data())
-

@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
+# encoding: utf8
 
 """
 文本卡片
@@ -27,9 +22,9 @@ class TextCard(BaseCard):
         self.data['type'] = "txt"
         self.data['content'] = "%s" % content
 
+
 if __name__ == '__main__':
 
     textCard = TextCard('sdfasdfs')
     textCard.set_content('hehe')
     print(textCard.get_data())
-    pass

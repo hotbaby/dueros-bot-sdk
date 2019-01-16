@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2017/12/30
-
+# encoding: utf8
 """
 指令基类
 """
@@ -27,7 +21,7 @@ class BaseDirective(object):
         生成Token md5(9位随机数+时间戳) 再截取md5后的字符串
         :return: uuid
         """
-        #生成随机数
+        # 生成随机数
         rand = str(random.randint(0, 9999999999))
         t = str(round(time.time() * 1000))
         md5Str = rand + t
@@ -59,4 +53,3 @@ if __name__ == '__main__':
 
     directive = BaseDirective('TEXT')
     print(directive.get_token())
-    pass

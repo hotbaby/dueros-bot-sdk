@@ -1,23 +1,16 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
+import json
+import base64
+import logging
+import requests
+from multiprocessing import cpu_count
+from concurrent.futures import ThreadPoolExecutor
 
-# description:
-# author:jack
-# create_time: 2018/1/3
-"""
-    desc:pass
-"""
 from dueros.monitor.model.Request import Request
 from dueros.monitor.model.Response import Response
 from dueros.monitor.Utils import Utils
 from dueros.monitor.BotMonitorConfig import BotMonitorConfig
 from dueros.Certificate import Certificate
-import json
-import base64
-import requests
-import logging
-from concurrent.futures import ThreadPoolExecutor
-from multiprocessing import cpu_count
 
 
 class BotMonitor:
@@ -154,7 +147,7 @@ class BotMonitor:
         logging.info('准备上传技能统计数据')
         bot_id = self.request.get_bot_id()
 
-        #组装数据 返回元祖(base64后的data, 时间戳)
+        # 组装数据 返回元祖(base64后的data, 时间戳)
         tup = self.__build_upload_data()
 
         base64Data = tup[0]
@@ -167,8 +160,8 @@ class BotMonitor:
 
         logging.info('上传技能统计数据已放到线程池内')
         BotMonitor.thread_executor.submit(upload_data, url=self.config.get_upload_url(), data=base64Data,
-                                   signature=str(signature, encoding='utf-8'), bot_id=str(bot_id),
-                                   timestamp=str(timestamp), pkversion=str(pkversion))
+                                          signature=str(signature, encoding='utf-8'), bot_id=str(bot_id),
+                                          timestamp=str(timestamp), pkversion=str(pkversion))
 
     def __build_upload_data(self):
         sysEvent = {
@@ -266,8 +259,3 @@ def upload_data(**kwargs):
     logging.info('准备统计数据上送到百度')
     response = requests.post(url, data=data, headers=headers)
     logging.info('数据统计回调结果' + response.text)
-
-
-if __name__ == '__main__':
-
-    pass

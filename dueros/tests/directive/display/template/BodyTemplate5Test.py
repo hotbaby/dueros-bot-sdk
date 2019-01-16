@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/7/20
-
-"""
-    desc:pass
-"""
 import unittest
 from dueros.directive.Display.template.BodyTemplate5 import BodyTemplate5
 
@@ -36,14 +28,14 @@ class BodyTemplate5Test(unittest.TestCase):
         ret = {
             'type': 'BodyTemplate5',
             'token': '0c71de96-15d2-4e79-b97e-e52cec25c254',
-            'images':[
+            'images': [
                 {
-                    'url':'http://uri-img1.com',
+                    'url': 'http://uri-img1.com',
                     'widthPixels': '1332',
                     'heightPixels': '123'
-                },{
-                    'url':'http://uri-img1.com'
-                },{
+                }, {
+                    'url': 'http://uri-img1.com'
+                }, {
                     'url': 'http://uri-img1.com',
                     'widthPixels': '32',
                     'heightPixels': '123'
@@ -55,8 +47,4 @@ class BodyTemplate5Test(unittest.TestCase):
         }
 
         self.assertEqual(data, ret)
-    pass
-
-
-if __name__ == '__main__':
     pass

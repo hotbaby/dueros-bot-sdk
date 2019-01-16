@@ -1,20 +1,13 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
-
-# description:
-# author:jack
-# create_time: 2018/4/15
-
-"""
-    desc:pass
-"""
+# encoding: utf8
 
 
 class _Constants:
 
-    class ConstError(TypeError): pass
+    class ConstError(TypeError):
+        pass
 
-    class ConstCaseError(ConstError): pass
+    class ConstCaseError(ConstError):
+        pass
 
     def __setattr__(self, name, value):
         if name in self.__dict__:
@@ -26,9 +19,8 @@ class _Constants:
 
 constants = _Constants()
 
-#日志存放地址
+# 日志存放地址
 constants.LOG_PATH = './apps/log/dueros'
 
 if __name__ == '__main__':
     print(constants.LOG_PATH)
-    pass

@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-# -*- encoding=utf-8 -*-
+# encoding: utf8
 
-# description:
-# author:jack
-# create_time: 2018/5/28
-
-"""
-    desc:pass
-"""
 from dueros.directive.AudioPlayer.Control.BaseButton import BaseButton
 
 
@@ -20,9 +12,3 @@ class RadioButton(BaseButton):
     def set_selected_value(self, selected_value):
 
         self.data['selectedValue'] = selected_value
-
-    pass
-
-
-if __name__ == '__main__':
-    pass
