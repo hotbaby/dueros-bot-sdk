@@ -4,7 +4,7 @@ import os
 import fcntl
 import hashlib
 import OpenSSL
-import urllib.request
+import requests
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto.Hash import SHA
@@ -57,7 +57,7 @@ class Certificate(Base):
         md5.update(filename.encode('utf-8'))
         cache = os.getcwd() + os.path.sep + md5.hexdigest()
         if not os.path.exists(cache):
-            content = urllib.request.urlopen(filename).read()
+            content = requests.get(filename).conent
             if not content:
                 return
             with open(cache, 'w') as f:
