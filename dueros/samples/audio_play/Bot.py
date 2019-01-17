@@ -99,7 +99,7 @@ class Bot(Bot):
         self.add_event_listener('AudioPlayer.PlaybackNearlyFinished', self.playBackStartedEvent)
 
     def musicsData(self):
-        with open("./audio_play/musics.json", 'r', encoding='utf-8') as load_f:
+        with open("./audio_play/musics.json", 'r') as load_f:
             return load_f.read()
     curIndex = 0
     musics = []

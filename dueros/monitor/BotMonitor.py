@@ -160,7 +160,7 @@ class BotMonitor:
 
         logging.info('上传技能统计数据已放到线程池内')
         BotMonitor.thread_executor.submit(upload_data, url=self.config.get_upload_url(), data=base64Data,
-                                          signature=str(signature, encoding='utf-8'), bot_id=str(bot_id),
+                                          signature=str(signature), bot_id=str(bot_id),
                                           timestamp=str(timestamp), pkversion=str(pkversion))
 
     def __build_upload_data(self):
